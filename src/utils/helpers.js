@@ -63,7 +63,7 @@ export const topCardMenuItems = [
         
     },
     {   id:5,
-        name:'DevGps',
+        name:'DevGPS',
         icon:'img_television_black_900.svg',
         onClick:'#',
         count:0,

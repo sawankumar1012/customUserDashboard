@@ -5,17 +5,17 @@ import {
   topCardMenuItems,
   userFeedBackData,
   filterDropDownOptions,
-  filterFrequencyDropDownOptions,
+  filterFrequencyDropDownOptions
 } from "@/utils/helpers";
 import { FeedBackCard } from "../FeedBackCard/index";
-import DateRangePicker from 'rsuite/DateRangePicker';
-import 'rsuite/DateRangePicker/styles/index.css';
+import DateRangePicker from "rsuite/DateRangePicker";
+import "rsuite/DateRangePicker/styles/index.css";
 
 
 export const DashboardOverview = () => {
   const [activeTabId, setActiveTabId] = useState(3);
   const [dataSet, setDataSet] = useState([
-    10, 5, 20, 15, 30, 40, 30, 40, 70, 65, 60, 19, 11, 12,
+    10, 5, 20, 15, 30, 40, 30, 40, 70, 65, 60, 19, 11, 12
   ]);
   const [dataLabels, setDataLabels] = useState([
     "1",
@@ -31,7 +31,7 @@ export const DashboardOverview = () => {
     "9",
     "10",
     "11",
-    "12",
+    "12"
   ]);
   return (
     <>
@@ -78,7 +78,7 @@ export const DashboardOverview = () => {
         </Text>
       </div>
       <div className="mt-2 mx-6">
-        {dataSet && dataLabels && (
+        {dataSet && dataSet.length > 0 && dataLabels && dataLabels.length > 0 && (
           <FeedBackChart dataSet={dataSet} dataLabels={dataLabels} />
         )}
 
@@ -89,9 +89,9 @@ export const DashboardOverview = () => {
               {/* feedback quality filters section */}
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between gap-5 md:flex-col">
-                
+
                   <div className="flex w-[40%] items-center justify-center gap-4 md:w-full sm:flex-col">
-                
+
                     <Button
                       shape="round"
                       leftIcon={
