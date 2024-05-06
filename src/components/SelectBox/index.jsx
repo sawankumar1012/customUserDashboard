@@ -110,7 +110,7 @@ SelectBox.propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
   indicator: PropTypes.node,
-  shape: PropTypes.oneOf(["round"]),
+  shape: PropTypes.oneOf(["round", "rounded-lg"]),
   size: PropTypes.oneOf(["xs"]),
   variant: PropTypes.oneOf(["fill"]),
   color: PropTypes.oneOf(["white_A700"]),

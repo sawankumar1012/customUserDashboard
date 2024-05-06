@@ -49,7 +49,7 @@ export default function Sidebar1({ ...props }) {
           {sideCardMenuItems &&
             sideCardMenuItems.root?.map((el) => (
               <MenuItem
-              component={<Link href={el.onClick}/>}
+              component={<Link href="#"/>}
               key={el.id}
                 icon={
                   <Img
@@ -76,7 +76,7 @@ export default function Sidebar1({ ...props }) {
             sideCardMenuItems.mainMenu?.map((el) => (
               <MenuItem
               key={el.id}
-              component={<Link href={el.onClick}/>}
+              component={<Link href="#"/>}
                 icon={
                   <Img
                     src={el.icon}
@@ -102,7 +102,7 @@ export default function Sidebar1({ ...props }) {
             sideCardMenuItems.general?.map((el) => (
               <MenuItem
               key={el.id}
-              component={<Link href={el.onClick}/>}
+              component={<Link href="#"/>}
                 icon={
                   <Img
                     src={el.icon}

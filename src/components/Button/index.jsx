@@ -71,7 +71,7 @@ Button.propTypes = {
   rightIcon: PropTypes.node,
   shape: PropTypes.oneOf(["round", "circle", "square"]),
   size: PropTypes.oneOf(["md", "xs", "sm"]),
-  variant: PropTypes.oneOf(["fill"]),
+  variant: PropTypes.oneOf(["fill", "outline"]),
   color: PropTypes.oneOf(["white_A700", "teal_700", "indigo_A200"]),
 };
 

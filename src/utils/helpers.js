@@ -43,7 +43,7 @@ export const sideCardMenuItems= {
 export const topCardMenuItems = [
     {   id:1,
         name:'Analytics',
-        icon:<AnalyticsIcon/>,
+        icon:'img_container.svg',
         onClick:'#',
         count:0
     },

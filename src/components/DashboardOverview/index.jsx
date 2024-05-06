@@ -80,7 +80,6 @@ export const DashboardOverview = () => {
       </div>
       <div className="mt-2 mx-6">
         {dataSet && dataSet.length > 0 && dataLabels && dataLabels.length > 0 && (
-        {dataSetdataSet.length>0 && dataLabels.length>0 && (
           <FeedBackChart dataSet={dataSet} dataLabels={dataLabels} />
         )}
 
