@@ -1,3 +1,4 @@
+import { AnalyticsIcon } from "@/components/icons/AnalyticsIcon";
 
 
 export const sideCardMenuItems= {
@@ -42,7 +43,7 @@ export const sideCardMenuItems= {
 export const topCardMenuItems = [
     {   id:1,
         name:'Analytics',
-        icon:'img_container.svg',
+        icon:<AnalyticsIcon/>,
         onClick:'#',
         count:0
     },
