@@ -33,7 +33,7 @@ const Button = ({
       indigo_A200: "bg-indigo-A200 text-white-A700",
     },
     outline:{
-      white_A700: `bg-white-A700 text-black-900 ${active&&('border-b-2 border-indigo-A200')}`,
+      white_A700: `bg-white-A700 text-black-900 ${active&&('border-b-2 border-indigo-A200 text-indigo-A200')}`,
     }
   };
   return (
@@ -53,7 +53,7 @@ const Button = ({
      {count && 
       <Heading
         as="h2"
-        className=" flex items-center justify-center rounded-lg bg-indigo-A200 p-0.5 uppercase tracking-[0.40px]"
+        className={`flex items-center justify-center rounded-lg ${active?'bg-indigo-A200 text-white-A700':'bg-gray-100 border-gray-500 border-[1px] text-black-900'} bg-indigo-A200 p-0.5 uppercase tracking-[0.40px] ${active?'bg-indigo-A200':'bg-gray-300 text-black-900'}`}
       >
         {count}
       </Heading>
@@ -69,6 +69,8 @@ Button.propTypes = {
   children: PropTypes.node,
   leftIcon: PropTypes.node,
   rightIcon: PropTypes.node,
+  active: PropTypes.bool,
+  count: PropTypes.number,
   shape: PropTypes.oneOf(["round", "circle", "square"]),
   size: PropTypes.oneOf(["md", "xs", "sm"]),
   variant: PropTypes.oneOf(["fill", "outline"]),

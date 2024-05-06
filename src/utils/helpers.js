@@ -1,4 +1,9 @@
 import { AnalyticsIcon } from "@/components/icons/AnalyticsIcon";
+import { AttendanceIcon } from '@/components/icons/AttendanceIcon'
+import { BookMarkIcon } from "@/components/icons/BookMarkIcon";
+import { BracesIcon } from "@/components/icons/BracesIcon";
+import { CloudChat } from "@/components/icons/CloudChat";
+import { StarIcon } from "@/components/icons/StarIcon";
 
 
 export const sideCardMenuItems= {
@@ -43,13 +48,13 @@ export const sideCardMenuItems= {
 export const topCardMenuItems = [
     {   id:1,
         name:'Analytics',
-        icon:'img_container.svg',
+        icon:AnalyticsIcon,
         onClick:'#',
         count:0
     },
     {   id:2,
         name:'Attendance',
-        icon:'img_television.svg',
+        icon:AttendanceIcon,
         onClick:'#',
         count:0,
        
@@ -57,15 +62,15 @@ export const topCardMenuItems = [
   
     {   id:4,
         name:'Notes',
-        icon:'img_bookmark.svg',
+        icon:BookMarkIcon,
         onClick:'#',
-        count:0,
+        count:217,
        
         
     },
     {   id:5,
         name:'DevGPS',
-        icon:'img_television_black_900.svg',
+        icon:BracesIcon,
         onClick:'#',
         count:0,
        
@@ -73,7 +78,7 @@ export const topCardMenuItems = [
     },
     {   id:3,
         name:'Feedback Quality',
-        icon:'img_signal.svg',
+        icon:StarIcon,
         onClick:'#',
         count:217,
        
@@ -81,7 +86,7 @@ export const topCardMenuItems = [
     },
     {   id:6,
         name:'Graduation',
-        icon:'img_contrast.svg',
+        icon:CloudChat,
         count:0,
         onClick:'#'
       

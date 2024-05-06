@@ -6,6 +6,7 @@ import {
   userFeedBackData,
   filterDropDownOptions,
   filterFrequencyDropDownOptions,
+
 } from "@/utils/helpers";
 import { FeedBackCard } from "../FeedBackCard/index";
 import DateRangePicker from 'rsuite/DateRangePicker';
@@ -47,24 +48,19 @@ export const DashboardOverview = () => {
               Good to see you again.{" "}
             </Text>
           </div>
+          
           <div className="flex gap-8 md:flex-col">
             {topCardMenuItems.map((el) => (
               <Button
                 key={el.id}
-                variant="outline"
+                variant='outline'
                 size="sm"
                 shape="square"
                 count={el.count ? el.count : null}
-                active={activeTabId === el.id}
+                active= {activeTabId === el.id}
                 onClick={() => setActiveTabId(el.id)}
                 leftIcon={
-                  <Img
-                    src={el.icon}
-                    width={20}
-                    height={20}
-                    alt="chart image"
-                    className="h-[20px] w-[20px] "
-                  />
+                <el.icon active={activeTabId === el.id}/>
                 }
               >
                 {el.name}
@@ -73,7 +69,7 @@ export const DashboardOverview = () => {
           </div>
         </div>
       </div>
-      <div className="ml-4">
+      <div className="ml-4 mt-10">
         <Text size="xl" as="p" className="!text-black-900">
           Feedback Quality
         </Text>
@@ -84,10 +80,10 @@ export const DashboardOverview = () => {
         )}
 
         <div className="mt-8  flex w-full  flex-col gap-4 md:w-full">
-          {/* feedback quality section */}
+       
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-[23px]">
-              {/* feedback quality filters section */}
+              
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between gap-5 md:flex-col">
                 
