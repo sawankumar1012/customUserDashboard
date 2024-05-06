@@ -257,7 +257,7 @@ export const FeedBackChart = ({dataLabels,dataSet}) => {
 
   return (
     <div className="mt-2  bg-white-A700  rounded-xl shadow-sm p-2  max-h-98 max-w-full py-6">
-<Chart ref={chartRef} type="line" options={options} data={data} />
+<Line ref={chartRef} type="line" options={options} data={data} />
 <div id="html-legend" className="mx-auto "></div>
 </div>
   );
