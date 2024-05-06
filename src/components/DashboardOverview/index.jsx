@@ -87,7 +87,7 @@ export const DashboardOverview = () => {
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between gap-5 md:flex-col">
                 
-                  <div className="flex w-[40%] items-center justify-center gap-4 md:w-full sm:flex-col">
+                  <div className="flex w-[50%] items-center justify-center gap-4 md:w-full sm:flex-col">
                 
                     <Button
                       shape="round"
