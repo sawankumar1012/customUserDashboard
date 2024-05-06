@@ -72,12 +72,10 @@ const htmlLegendPlugin = {
   afterUpdate(chart, args, options) {
     const ul = getOrCreateLegendList(chart, options.containerID);
 
-    // Remove old legend items
     while (ul.firstChild) {
       ul.firstChild.remove();
     }
 
-    // Reuse the built-in legendItems generator
     const items = chart.options.plugins.legend.labels.generateLabels(chart);
 
     items.forEach((item) => {
@@ -91,7 +89,6 @@ const htmlLegendPlugin = {
       li.onclick = () => {
         const { type } = chart.config;
         if (type === "pie" || type === "doughnut") {
-          // Pie and doughnut charts only have a single dataset and visibility is per item
           chart.toggleDataVisibility(item.index);
         } else {
           chart.setDatasetVisibility(
@@ -102,7 +99,6 @@ const htmlLegendPlugin = {
         chart.update();
       };
 
-      // Color box
       const boxSpan = document.createElement("span");
       boxSpan.style.background = item.strokeStyle;
       boxSpan.style.borderColor = item.strokeStyle;
@@ -113,7 +109,6 @@ const htmlLegendPlugin = {
       boxSpan.style.marginRight = "10px";
       boxSpan.style.width = "3px";
 
-      // Text
       const textContainer = document.createElement("p");
       textContainer.style.color = item.fontColor;
       textContainer.style.margin = "0";
